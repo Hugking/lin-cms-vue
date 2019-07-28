@@ -1,0 +1,55 @@
+const ShopGoodsRouter = {
+  route: null,
+  name: null,
+  title: '商品管理',
+  type: 'folder',
+  icon: 'iconfont icon-demo',
+  filePath: 'views/ShopGoods/',
+  order: null,
+  inNav: true,
+  children: [
+    {
+      title: '商品明细',
+      type: 'folder',
+      name: 'shopGoods',
+      route: '/shop-goods/goods',
+      filePath: 'plugins/ShopGoods/views/goods',
+      inNav: true,
+      icon: 'iconfont icon-demo',
+      children: [
+        {
+          title: '添加商品',
+          type: 'view',
+          name: 'shopGoodsAdd',
+          route: '/shop-goods/goods/add',
+          filePath: 'plugins/ShopGoods/views/goods/GoodsAdd.vue',
+          inNav: true,
+          icon: 'iconfont icon-huiyuanguanli',
+          right: null,
+        },
+        {
+          title: '商品列表',
+          type: 'view',
+          inNav: true,
+          route: '/shop-goods/goods/list',
+          icon: 'iconfont icon-add',
+          name: 'shopGoodsList',
+          filePath: 'plugins/ShopGoods/views/goods/GoodsList.vue',
+          right: null,
+        },
+      ],
+    },
+    // {
+    //   title: '商品明细',
+    //   type: 'view',
+    //   name: 'ShopGoodsList',
+    //   route: '/shop-goods/list',
+    //   filePath: 'plugins/ShopGoods/views/GoodsList.vue',
+    //   inNav: true,
+    //   icon: 'iconfont icon-demo',
+    //   right: null,
+    // },
+  ],
+}
+
+export default ShopGoodsRouter

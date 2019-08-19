@@ -39,6 +39,10 @@ export default {
       type: Boolean,
       default: true,
     },
+    Fcontent: {
+      type: String,
+      default: '',
+    },
   },
   components: {
     Editor,
@@ -95,7 +99,10 @@ export default {
   },
   watch: {
     // eslint-disable-next-line
-    content: function() {
+    Fcontent: function(newvalue) {
+      this.content = newvalue
+    },
+    content() {
       this.$emit('change', this.content)
     },
   },
